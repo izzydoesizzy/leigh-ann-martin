@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ServiceHero from "../components/services/ServiceHero.astro";
+import RetainerPackages from "../components/services/RetainerPackages.astro";
+import ProjectAddOns from "../components/services/ProjectAddOns.astro";
+import WhoItsFor from "../components/services/WhoItsFor.astro";
+import ServiceCta from "../components/services/ServiceCta.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Services — Leigh-Ann Martin | Strategic Executive Partnership">
+  <Header />
+  <main>
+    <ServiceHero />
+    <RetainerPackages />
+    <ProjectAddOns />
+    <WhoItsFor />
+    <ServiceCta />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  const revealEls = document.querySelectorAll("[data-reveal], [data-reveal-stagger]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+  );
+  revealEls.forEach((el) => observer.observe(el));
+</script>
