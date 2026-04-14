@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Situation from "../components/Situation.astro";
+import Deliverables from "../components/Deliverables.astro";
+import Timeline from "../components/Timeline.astro";
+import About from "../components/About.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Investment from "../components/Investment.astro";
+import Cta from "../components/Cta.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Your Career Brand Sprint — ClearCareer">
+  <Header />
+  <main>
+    <Hero />
+    <Situation />
+    <Deliverables />
+    <Timeline />
+    <About />
+    <Testimonials />
+    <Investment />
+    <Cta />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  // Scroll reveal observer
+  const revealEls = document.querySelectorAll("[data-reveal], [data-reveal-stagger]");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: "0px 0px -60px 0px" }
+  );
+  revealEls.forEach((el) => observer.observe(el));
+</script>
