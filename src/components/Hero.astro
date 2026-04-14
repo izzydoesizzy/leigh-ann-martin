@@ -1,28 +1,50 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <section id="top" class="relative min-h-[85vh] flex items-center bg-primary overflow-hidden">
   <div class="absolute inset-0 opacity-[0.03]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
 
-  <div class="relative max-w-4xl mx-auto px-6 pt-28 pb-20 md:pt-36 md:pb-28">
-    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-8">
-      <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-      <span class="text-white/70 text-xs font-medium tracking-widest uppercase">Prepared for Leigh-Ann Martin</span>
+  <div class="relative max-w-4xl mx-auto px-6 pt-28 pb-20 md:pt-36 md:pb-28 grid md:grid-cols-12 gap-10 md:gap-12 items-center">
+    <!-- Photo -->
+    <div class="md:col-span-4 flex justify-center md:justify-start">
+      <div class="relative">
+        <div class="absolute -inset-2 rounded-2xl border border-white/10"></div>
+        <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
+          <img
+            src={`${base}leigh-ann.jpg`}
+            alt="Leigh-Ann Martin"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
     </div>
 
-    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] mb-8">
-      Build Your
-      <span class="text-secondary">Consulting Business</span>
-    </h1>
+    <!-- Text -->
+    <div class="md:col-span-8">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        <span class="text-white/70 text-xs font-medium tracking-widest uppercase">A plan for Leigh-Ann Martin</span>
+      </div>
 
-    <p class="text-white/60 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-      A 4-week engagement to turn 10+ years of executive support into a consulting business. Your own brand, your own clients, your own terms.
-    </p>
+      <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-[1.15] mb-6">
+        10+ years of executive-level work.<br />
+        Now it becomes
+        <span class="text-secondary">your business.</span>
+      </h1>
 
-    <a
-      href="#situation"
-      class="inline-flex items-center gap-2 text-white/50 text-sm font-medium hover:text-white/80 transition-colors"
-    >
-      Read the full plan
-      <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
-    </a>
+      <p class="text-white/55 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+        In 4 weeks, you'll have your own website, your own service packages, your own client pipeline, and a clear plan to go after the people who need exactly what you do.
+      </p>
+
+      <a
+        href="#situation"
+        class="inline-flex items-center gap-2 text-white/50 text-sm font-medium hover:text-white/80 transition-colors"
+      >
+        See the full plan
+        <svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </div>
   </div>
 
   <div class="absolute bottom-0 left-0 right-0 bg-white/[0.04] backdrop-blur-sm border-t border-white/[0.06]">
