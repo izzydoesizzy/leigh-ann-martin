@@ -10,6 +10,39 @@ import Footer from "../../components/Footer.astro";
 
 const roles = [
   {
+    id: "petrotrin",
+    company: "Petrotrin",
+    title: "Admin Assistant, Office of the VP of Oil & Refining",
+    dates: "Age 18 through September 2006 US migration",
+    industry: "Trinidad state-owned vertically integrated oil company",
+    achievements: [
+      {
+        label: "Career Origin",
+        description:
+          "Started corporate-track career at age 18 at Petrotrin, Trinidad's state-owned vertically integrated oil company and the country's largest employer pre-2018 dissolution, supporting the Office of the VP of Oil & Refining (who reported directly to the GM) through the executive assistant's team with responsibility for filing, interoffice mail, and exposure to refinery operations documentation across all of refining and marketing.",
+      },
+    ],
+  },
+  {
+    id: "bearingpoint",
+    company: "BearingPoint",
+    title: "Administrative support, Finance / Treasury (NYC)",
+    dates: "November 2007 through Chapter 11 wind-down",
+    industry: "Management consulting (Chapter 11 bankruptcy)",
+    achievements: [
+      {
+        label: "First US Corporate Role",
+        description:
+          "Supported 4 finance leaders (VP, Treasurer, VP of Finance, plus one additional) at BearingPoint starting November 2007, first US corporate role after migrating from Trinidad in 2006, covering accounts payable, accounts receivable, and wire-transfer workflows from the firm's offices in the American Express towers on Vesey Street.",
+      },
+      {
+        label: "Chapter 11 Continuity",
+        description:
+          "Maintained finance-function continuity through BearingPoint's Chapter 11 bankruptcy wind-down by operating through the team's move from the American Express towers to a co-working space off Broadway, and by coordinating with offshore teams in India and the British Virgin Islands as operations consolidated offshore for cost reasons.",
+      },
+    ],
+  },
+  {
     id: "dgb",
     company: "DGB Management",
     title: "Virtual Assistant, Internal Operations",
@@ -221,7 +254,7 @@ const totalAchievements = roles.reduce((sum, r) => sum + r.achievements.length, 
           Achievements, resume-ready, quantified.
         </h1>
         <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
-          Every quantified achievement from your intake transcripts, formatted as the 2-column table the <code class="font-mono text-sm bg-warm px-1.5 py-0.5 rounded">write-achievements</code> skill produces. Copy these straight into your resume, LinkedIn, consulting proposal, or cover letters. {totalAchievements} achievements across 6 roles.
+          Every quantified achievement from your intake transcripts, formatted as the 2-column table the <code class="font-mono text-sm bg-warm px-1.5 py-0.5 rounded">write-achievements</code> skill produces. Copy these straight into your resume, LinkedIn, consulting proposal, or cover letters. {totalAchievements} achievements across {roles.length} roles.
         </p>
       </div>
     </section>
