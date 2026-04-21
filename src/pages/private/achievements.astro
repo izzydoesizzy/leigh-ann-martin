@@ -3,20 +3,29 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-// XYZ format: [Accomplished X] [as measured by Y] [by doing Z]
-// Only confirmed + reliable-estimated data from intake transcripts. No fabricated metrics.
-// Chronological order: DGB → R&T → PwC → Third Bridge → Immunovant → Ascend.
+// Skill: write-achievements (2-column Achievement | Description table).
+// Every metric is confirmed or reliably estimated from Leigh-Ann's intake transcripts.
+// No em dashes anywhere on this page.
+// Chronological order: DGB, R&T, PwC, Third Bridge, Immunovant, Ascend.
 
 const roles = [
   {
     id: "dgb",
     company: "DGB Management",
     title: "Virtual Assistant, Internal Operations",
-    dates: "Overlapped BearingPoint wind-down → Rich & Tang",
+    dates: "Overlapped BearingPoint wind-down through Rich & Tang",
     industry: "Real-estate / advisory services",
-    bullets: [
-      "Built DGB Management's first centralized client database in Microsoft Access, cutting owner field-to-entry process time by ~30% by replacing a scattered home-data-entry workflow across a 2–3-client advisory portfolio.",
-      "Supported internal operations layer through two landed client projects — Downtown Brooklyn's Fulton Street Mall and Beacon, NY — by centralizing client records and absorbing data-entry load off principals' desks during the firm's growth phase.",
+    achievements: [
+      {
+        label: "Process Reduction",
+        description:
+          "Built DGB Management's first centralized client database in Microsoft Access, cutting owner field-to-entry process time by approximately 30% by replacing a scattered home data entry workflow across a 2 to 3 client advisory portfolio.",
+      },
+      {
+        label: "Project Delivery",
+        description:
+          "Supported data entry and client record infrastructure through two landed client projects (Downtown Brooklyn's Fulton Street Mall and Beacon, New York) during the firm's growth phase.",
+      },
     ],
   },
   {
@@ -25,112 +34,221 @@ const roles = [
     title: "Operations / Customer-Service Team Support",
     dates: "Pre-PwC return; ended in mass layoffs",
     industry: "Brokerage / client services",
-    bullets: [
-      "Authored 1 procedural management manual codifying lockbox management, operations and customer-service workflows, and backup-reception procedures across a 2-location brokerage (NY HQ + NJ satellite) by consolidating tribal knowledge into a single written reference.",
-      "Improved broker-correspondence accuracy by ~20% by introducing multi-stage QC and periodic in-progress review — cutting returned mail and missed statements on the ad-hoc and quarterly broker distribution cycles.",
+    achievements: [
+      {
+        label: "Process Documentation",
+        description:
+          "Authored 1 procedural management manual codifying lockbox management, operations and customer-service workflows, and backup-reception procedures across a 2-location brokerage (NY HQ plus NJ satellite).",
+      },
+      {
+        label: "Accuracy Improvement",
+        description:
+          "Improved broker correspondence accuracy by approximately 20% by introducing multi-stage QC and periodic in-progress review, cutting returned mail on ad-hoc and quarterly broker distribution cycles.",
+      },
     ],
   },
   {
     id: "pwc",
     company: "PwC",
-    title: "Team Assistant — Indirect Tax + State/Income Franchise Tax → Thought Leadership",
-    dates: "Multi-year tenure (~2.5–3 years in Tax before Thought Leadership scope added)",
+    title: "Team Assistant, Indirect Tax and State/Income Franchise Tax, plus Thought Leadership",
+    dates: "Multi-year tenure (approximately 2.5 to 3 years in Tax before Thought Leadership scope added)",
     industry: "Big 4 public accounting",
-    bullets: [
-      "Supported 2 tax teams simultaneously within State and Local Tax across the full associate-to-MD ladder by owning Time and Expense for every director and MD in both groups and serving as the team's central logistics point.",
-      "Stewarded the Thought Leadership Managing Director's weekly budget-tracking workflow at 3 purchase orders × 500 companies scale by maintaining the WHIP (Work-In-Progress) report on formula-driven spreadsheet infrastructure that fed MD-level pivot-table analysis.",
-      "Mentored and onboarded 4 incoming team assistants outside the formal PwC program by co-creating department-specific onboarding materials that extended firm-wide PwC docs with state-and-local-tax-specific playbooks.",
-      "Delivered reliable team coverage across a 9-month annual peak season (January–April extension filings + June–September hard deadlines of Sept 15, Oct 15, Nov 15) by proactively picking up cross-team work — earning 'invaluable' designation from the team.",
+    achievements: [
+      {
+        label: "Multi-Team Support",
+        description:
+          "Supported 2 tax teams simultaneously (Indirect Tax and State/Income Franchise Tax) within State and Local Tax across the full associate-to-MD ladder, owning Time and Expense for every director and MD in both groups.",
+      },
+      {
+        label: "Budget Tracking",
+        description:
+          "Stewarded the Thought Leadership Managing Director's weekly budget-tracking workflow at 3 purchase orders covering 500 companies, maintaining the WHIP (Work-In-Progress) report on formula-driven spreadsheets that fed MD-level pivot-table analysis.",
+      },
+      {
+        label: "Mentorship",
+        description:
+          "Mentored and onboarded 4 incoming team assistants outside the formal PwC program, co-creating department-specific onboarding materials that extended firm-wide PwC docs into state-and-local-tax playbooks.",
+      },
+      {
+        label: "Peak Season Coverage",
+        description:
+          "Delivered reliable team coverage across a 9-month annual peak tax season (January to April extension filings plus June to September deadlines of September 15, October 15, November 15), earning 'invaluable' designation from the team for proactive cross-team pickup.",
+      },
     ],
   },
   {
     id: "thirdbridge",
     company: "Third Bridge",
-    title: "Internal Firm Services EA — NY + London",
-    dates: "Post-PwC → pre-Immunovant",
+    title: "Internal Firm Services EA, New York and London",
+    dates: "Post-PwC, pre-Immunovant",
     industry: "Expert network consultancy",
-    bullets: [
-      "Supported 3 executives across New York and London — MD of Operations, Chief HR Officer, and visiting President/Founder — by starting workday at 8am ET for London-afternoon overlap and running NY-visit handover coordination with the London EA.",
-      "Hired 1 NY admin (dual-hat HR + sales support) by co-authoring the job description with HR and serving on the interview panel during an HR buildout driven by the Texas office opening.",
-      "Authored Third Bridge's first EA-function onboarding manual covering office-manager backup, travel and expense policy, external-guest protocols, and the President/CEO NY-visit playbook — standardizing NY EA onboarding for the first time.",
-      "Enforced ELT meeting budget discipline across NY and London by combining policy adherence (no first/business class on <5hr flights, nightly hotel-rate ceilings) with historical-data benchmarking against prior-year spend and employee headcount.",
+    achievements: [
+      {
+        label: "Multi-Geography Support",
+        description:
+          "Supported 3 executives across New York and London (MD of Operations, Chief HR Officer, and visiting President/Founder) by starting workday at 8am ET for London afternoon overlap and coordinating NY-visit handovers with the London EA.",
+      },
+      {
+        label: "Hiring",
+        description:
+          "Hired 1 NY admin with dual HR and sales support coverage by co-authoring the job description with HR and sitting on the interview panel, during an HR buildout driven by the Texas office opening.",
+      },
+      {
+        label: "Onboarding Manual",
+        description:
+          "Authored Third Bridge's first EA-function onboarding manual covering office-manager backup, travel and expense policy, external-guest protocols, and the President/CEO NY-visit playbook.",
+      },
+      {
+        label: "Budget Discipline",
+        description:
+          "Enforced ELT meeting budget discipline across NY and London through policy adherence (no first or business class on flights under 5 hours, nightly hotel rate ceilings) and historical-data benchmarking against prior-year spend and employee headcount.",
+      },
     ],
   },
   {
     id: "imvt",
     company: "Immunovant",
-    title: "Sole Executive Assistant → EA Team Lead",
-    dates: "September 2019 →",
+    title: "Sole Executive Assistant, scaled to EA Team Lead",
+    dates: "September 2019 onward",
     industry: "Pre-IPO clinical-stage biopharma",
-    bullets: [
-      "Joined as employee #17–19 at clinical-stage biopharma Immunovant and scaled sole-EA coverage from 1 to 5 C-suite executives (CEO, General Counsel, Chief Medical Officer, CFO, Chief Technology & Development Officer) between September 2019 and March 2020 across NY + North Carolina offices.",
-      "Built the Immunovant EA function from zero to a multi-person team by championing EA visibility in CEO 1:1s and securing low-cost L&D access from HR — establishing the EA track as a strategic-partnership function rather than transactional support.",
-      "Accelerated ELT and SLT decision velocity by ~30% (per CEO reviews and company growth rate) by owning hiring coordination, calendar pre-staging, and cross-functional follow-through as sole EA at pre-IPO growth stage.",
-      "Co-founded the Immunovant Culture Committee with HR — 6–10 members on a 6-month rotation, charter aligned to company KPIs and scorecard — by pitching ELT, securing a standing budget from the VP of Financial Planning, and running post-event surveys after every lunch-and-learn to measure messaging impact.",
-      "Reduced EA new-hire ramp time from a 6–8-week baseline by designing a centralized tabs-in-spreadsheets knowledge base (replacing scattered Word docs), buddy pairings, structured intro-meeting agendas per internal stakeholder, and weekly all-EA syncs with cross-EA 1:1s.",
-      "Coordinated FDA meeting readiness for the regulatory team by managing CEO + CMO + General Counsel prep, maintaining a fireproof lockbox for hardcopy FDA correspondence, booking AV and rooms across on-site and neutral off-site venues, and convening clinical-trial ad-boards across multiple trial phases.",
-      "Ran pre-IPO investor-relations coordination alongside the IR manager — press releases, earnings cycles, and no-deal roadshows — by owning CEO and CFO calendar time for investor meetings and maintaining documentation discipline heading into public-company readiness.",
-      "Preserved a bi-weekly ELT meeting through a high-friction General Counsel relationship by personally taking on agenda ownership, spreadsheet updates, and SLT follow-ups other leaders declined — freeing the GC's desk time and protecting ELT alignment through a difficult leadership dynamic.",
+    achievements: [
+      {
+        label: "Early Employee",
+        description:
+          "Joined as employee #17 to 19 at clinical-stage biopharma Immunovant in September 2019, scaling sole-EA coverage from 1 to 5 C-suite executives (CEO, General Counsel, Chief Medical Officer, CFO, Chief Technology and Development Officer) by March 2020 across NY and North Carolina offices.",
+      },
+      {
+        label: "Function Buildout",
+        description:
+          "Built the Immunovant EA function from zero to a multi-person team by championing EA visibility in CEO 1:1s and securing low-cost L&D access from HR, establishing the EA track as a strategic partnership function rather than transactional support.",
+      },
+      {
+        label: "Decision Velocity",
+        description:
+          "Accelerated ELT and SLT decision velocity by approximately 30% (per CEO reviews and company growth rate) by owning hiring coordination, calendar pre-staging, and cross-functional follow-through as sole EA at pre-IPO growth stage.",
+      },
+      {
+        label: "Culture Committee",
+        description:
+          "Co-founded the Immunovant Culture Committee with HR, scaling to 6 to 10 members on a 6-month rotation with charter aligned to company KPIs and scorecard, by pitching ELT, securing a standing budget from the VP of Financial Planning, and running post-event surveys after every lunch-and-learn.",
+      },
+      {
+        label: "Onboarding Ramp",
+        description:
+          "Reduced EA new-hire ramp time from a 6 to 8 week baseline by designing a centralized tabs-in-spreadsheets knowledge base (replacing scattered Word docs), buddy pairings, structured intro-meeting agendas per internal stakeholder, and weekly all-EA syncs.",
+      },
+      {
+        label: "FDA Coordination",
+        description:
+          "Coordinated FDA meeting readiness for the regulatory team by managing CEO, CMO, and General Counsel prep, maintaining a fireproof lockbox for hardcopy FDA correspondence, booking AV and rooms across on-site and neutral off-site venues, and convening clinical-trial ad-boards across multiple trial phases.",
+      },
+      {
+        label: "Investor Relations",
+        description:
+          "Ran pre-IPO investor-relations coordination alongside the IR manager across press releases, earnings cycles, and no-deal roadshows, owning CEO and CFO calendar time for investor meetings heading into public-company readiness.",
+      },
+      {
+        label: "Stakeholder Management",
+        description:
+          "Preserved a bi-weekly ELT meeting through a high-friction General Counsel relationship by personally owning agenda, spreadsheet updates, and SLT follow-ups other leaders declined, freeing GC desk time and protecting ELT alignment through a difficult leadership dynamic.",
+      },
     ],
   },
   {
     id: "ascend",
     company: "Ascend Wellness Holdings (AWH)",
     title: "Executive Assistant, Investor Relations",
-    dates: "January 2025 → January 2026",
-    industry: "Public cannabis operator — CSE & OTCQX-listed, 7 states",
-    bullets: [
-      "Coordinated ELT, SLT, HR, and legal stakeholders across a 7-state public cannabis operator (NJ, PA, IL, MA, MD, MI, OH) by maintaining cross-market visibility via Microsoft Teams and text-message channels after industry-restricted platform gaps.",
-      "Rebuilt Ascend's earnings-call prep into a repeatable 6–8-week system after one cycle in-role (launched July 2025, deployed Q2 2025) by aligning external IR (Mattio Communications), Legal, VP Financial Planning, PR, and C-suite on a shared calendar with SharePoint template and access-control discipline.",
-      "Eliminated after-the-fact earnings-prep rework by granting the Chief Commercial Officer script access and pulling the VP of Marketing into live Q2 prep meetings — closing the input-loop that had forced post-draft revisions under the prior cadence.",
-      "Established Ascend's first quarterly board-meeting cadence (zero board meetings on the calendar at hire) and, in September 2025, planned the full 2026 board and committee calendar 12 months ahead by aligning earnings dates, legal review windows, and board-member availability.",
-      "Coordinated an 8-person quarterly board convening (4 external directors + 4 Ascend executives: CEO, CFO, President, Chief Counsel) plus 2 standing committees — Audit and Compensation — alongside General Counsel, paralegal, VP Financial Planning, and external legal.",
-      "Elevated Ascend's weekly M&A meeting at CEO request by joining for executive presence, building a follow-up dashboard with leads and timelines, and creating presentation mock-ups that restructured the Director of M&A's informal capture into team-shareable format.",
-      "Earned direct chairman-of-the-board trust — personal phone number and ongoing text-message channel across a 12-month tenure — by maintaining chairman-facing responsiveness on earnings messaging, board readiness, and governance follow-throughs; responsiveness was the evidence base for the 98% stakeholder-satisfaction claim in her consulting proposal.",
-      "Vetted a public-speaking consultant for the CEO by screening candidates, scheduling multiple consultation meetings, and supporting a final decision that weighed executive-development value against consulting fee.",
+    dates: "January 2025 to January 2026",
+    industry: "Public cannabis operator, CSE and OTCQX-listed, 7 states",
+    achievements: [
+      {
+        label: "Multi-State Coordination",
+        description:
+          "Coordinated ELT, SLT, HR, and legal stakeholders across a 7-state public cannabis operator (NJ, PA, IL, MA, MD, MI, OH) trading on CSE and OTCQX, using Microsoft Teams and text-message channels as primary cross-market coordination tools after industry-restricted platform gaps.",
+      },
+      {
+        label: "Earnings System",
+        description:
+          "Rebuilt Ascend's earnings-call prep into a repeatable 6 to 8 week system after one cycle in-role (launched July 2025, deployed Q2 2025) by aligning external IR (Mattio Communications), Legal, VP Financial Planning, PR, and C-suite on a shared calendar with SharePoint template and access-control discipline.",
+      },
+      {
+        label: "Stakeholder Integration",
+        description:
+          "Eliminated after-the-fact earnings-prep rework by granting the Chief Commercial Officer script access and pulling the VP of Marketing into live Q2 prep meetings, closing the input loop that had forced post-draft revisions under the prior cadence.",
+      },
+      {
+        label: "Board Cadence",
+        description:
+          "Established Ascend's first quarterly board-meeting cadence (zero board meetings on the calendar at hire) and, in September 2025, planned the full 2026 board and committee calendar 12 months ahead by aligning earnings dates, legal review windows, and board-member availability.",
+      },
+      {
+        label: "Board Governance",
+        description:
+          "Coordinated an 8-person quarterly board convening (4 external directors plus 4 Ascend executives: CEO, CFO, President, Chief Counsel) and 2 standing committees (Audit and Compensation) alongside General Counsel, paralegal, VP Financial Planning, and external legal.",
+      },
+      {
+        label: "M&A Elevation",
+        description:
+          "Elevated Ascend's weekly M&A meeting at CEO request by joining for executive presence, building a follow-up dashboard with leads and timelines, and creating presentation mock-ups that restructured the Director of M&A's informal capture into team-shareable format.",
+      },
+      {
+        label: "Chairman Trust",
+        description:
+          "Earned direct chairman-of-the-board trust (personal phone number and ongoing text-message channel) across a 12-month tenure by maintaining chairman-facing responsiveness on earnings messaging, board readiness, and governance follow-throughs, the evidence base for the 98% stakeholder-satisfaction claim in her consulting proposal.",
+      },
+      {
+        label: "Executive Development",
+        description:
+          "Vetted a public-speaking consultant for the CEO by screening candidates, scheduling multiple consultation meetings, and supporting a final decision that weighed executive-development value against consulting fee.",
+      },
     ],
   },
 ];
+
+const totalAchievements = roles.reduce((sum, r) => sum + r.achievements.length, 0);
 ---
 
-<Layout title="Achievements — Leigh-Ann Martin (Private)">
+<Layout title="Achievements, Leigh-Ann Martin (Private)">
   <Header />
   <main>
     <!-- Hero -->
     <section class="pt-28 pb-14 md:pt-32 md:pb-16 bg-cream">
       <div class="max-w-4xl mx-auto px-6" data-reveal>
         <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary mb-4">
-          Private — For Leigh-Ann + Izzy only
+          Private, for Leigh-Ann and Izzy only
         </p>
         <h1 class="font-serif text-4xl md:text-5xl text-primary leading-tight mb-6">
-          Achievements — resume-ready, XYZ format.
+          Achievements, resume-ready, quantified.
         </h1>
         <p class="text-text-muted text-lg leading-relaxed max-w-2xl">
-          Every quantified achievement from your intake transcripts, rewritten as resume bullets. No drill-down questions. No fabricated metrics. Copy these straight into your resume, LinkedIn, consulting proposal, or cover letters.
+          Every quantified achievement from your intake transcripts, formatted as the 2-column table the <code class="font-mono text-sm bg-warm px-1.5 py-0.5 rounded">write-achievements</code> skill produces. Copy these straight into your resume, LinkedIn, consulting proposal, or cover letters. {totalAchievements} achievements across 6 roles.
         </p>
       </div>
     </section>
 
-    <!-- XYZ format explainer -->
-    <section class="py-10 md:py-12 bg-white border-b border-primary/[0.06]">
+    <!-- Jump nav -->
+    <section class="py-8 bg-white border-b border-primary/[0.06]">
       <div class="max-w-4xl mx-auto px-6" data-reveal>
-        <div class="flex flex-col md:flex-row md:items-center md:gap-8 gap-4">
-          <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary flex-shrink-0">
-            The XYZ format
-          </p>
-          <p class="text-text-muted leading-relaxed">
-            <span class="text-primary font-semibold">Accomplished [X]</span> as measured by <span class="text-primary font-semibold">[Y]</span> by doing <span class="text-primary font-semibold">[Z]</span>. Every bullet below follows this: a quantified outcome, a specific measurable scale, and the action that drove it.
-          </p>
+        <div class="flex flex-wrap gap-2 justify-start items-center">
+          <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-text-muted mr-3">Jump to</p>
+          {roles.map((r) => (
+            <a
+              href={`#${r.id}`}
+              class="inline-block bg-cream border border-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-medium hover:bg-primary hover:text-white transition-all"
+            >
+              {r.company}
+            </a>
+          ))}
         </div>
       </div>
     </section>
 
-    <!-- Role-by-role bullets -->
-    <section id="bullets" class="py-16 md:py-20 bg-warm">
+    <!-- Role-by-role tables -->
+    <section id="tables" class="py-14 md:py-16 bg-warm">
       <div class="max-w-4xl mx-auto px-6">
         {roles.map((role, idx) => (
-          <article id={role.id} class={`${idx > 0 ? "mt-12" : ""}`} data-reveal>
-            <header class="mb-6 pb-4 border-b border-primary/10">
+          <article id={role.id} class={`${idx > 0 ? "mt-14" : ""}`} data-reveal>
+            <header class="mb-5">
               <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 mb-1">
                 <h2 class="font-serif text-2xl md:text-3xl text-primary leading-tight">{role.company}</h2>
                 <p class="text-[11px] font-semibold uppercase tracking-wider text-secondary">{role.dates}</p>
@@ -139,20 +257,34 @@ const roles = [
               <p class="text-text-muted text-sm mt-1">{role.industry}</p>
             </header>
 
-            <ul class="space-y-4">
-              {role.bullets.map((b) => (
-                <li class="flex gap-4 items-start">
-                  <span class="text-secondary font-serif text-xl leading-none mt-1 flex-shrink-0">•</span>
-                  <p class="text-text leading-relaxed text-[15px]">{b}</p>
-                </li>
-              ))}
-            </ul>
+            <div class="bg-white rounded-xl shadow-sm overflow-hidden border border-primary/[0.08]">
+              <table class="w-full border-collapse">
+                <thead>
+                  <tr class="bg-cream/60 border-b border-primary/10">
+                    <th class="text-left text-[11px] font-semibold tracking-[0.15em] uppercase text-primary py-3 px-5 w-[28%] align-top">Achievement</th>
+                    <th class="text-left text-[11px] font-semibold tracking-[0.15em] uppercase text-primary py-3 px-5 align-top">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {role.achievements.map((ach, i) => (
+                    <tr class={i > 0 ? "border-t border-primary/[0.06]" : ""}>
+                      <td class="py-4 px-5 align-top">
+                        <p class="font-serif text-[15px] text-primary font-semibold leading-snug">{ach.label}</p>
+                      </td>
+                      <td class="py-4 px-5 align-top">
+                        <p class="text-text text-[14px] leading-relaxed">{ach.description}</p>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </article>
         ))}
       </div>
     </section>
 
-    <!-- Sourcing note -->
+    <!-- Source discipline -->
     <section class="py-16 bg-primary text-white">
       <div class="max-w-3xl mx-auto px-6 text-center" data-reveal>
         <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-accent mb-4">Source discipline</p>
@@ -160,25 +292,8 @@ const roles = [
           Every number traces back to your own words.
         </h2>
         <p class="text-white/75 leading-relaxed">
-          Confirmed numbers are stated verbatim in your intake transcripts. Numbers marked <span class="text-accent font-medium">~</span> are estimates you made yourself in conversation with Izzy (30% DGB process reduction, 20% R&T accuracy gain, 30% Immunovant decision velocity, ~#17–19 Immunovant employee). The 98% Ascend stakeholder satisfaction on your consulting proposal is your own estimate based on chairman-of-the-board and ELT responsiveness — not a formal survey. Nothing on this page was invented.
+          Confirmed numbers are stated verbatim in your intake transcripts. Numbers marked "approximately" are estimates you made yourself in conversation with Izzy (30% DGB process reduction, 20% R&T accuracy gain, 30% Immunovant decision velocity, employee #17 to 19 at Immunovant). The 98% Ascend stakeholder satisfaction rate on your consulting proposal is your own estimate based on chairman-of-the-board and ELT responsiveness, not a formal survey. Nothing on this page was invented.
         </p>
-      </div>
-    </section>
-
-    <!-- Jump navigation -->
-    <section class="py-12 bg-warm">
-      <div class="max-w-4xl mx-auto px-6" data-reveal>
-        <p class="text-[11px] font-semibold tracking-[0.2em] uppercase text-secondary mb-4 text-center">Jump to a role</p>
-        <div class="flex flex-wrap gap-2 justify-center">
-          {roles.map((r) => (
-            <a
-              href={`#${r.id}`}
-              class="inline-block bg-white border border-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-white transition-all"
-            >
-              {r.company}
-            </a>
-          ))}
-        </div>
       </div>
     </section>
   </main>
