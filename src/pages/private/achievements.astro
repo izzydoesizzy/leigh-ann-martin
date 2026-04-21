@@ -6,9 +6,9 @@ import Footer from "../../components/Footer.astro";
 // Skill: write-achievements (2-column Achievement | Description table).
 // Every metric is confirmed or reliably estimated from Leigh-Ann's intake transcripts.
 // No em dashes anywhere on this page.
-// Chronological order: DGB, R&T, PwC, Third Bridge, Immunovant, Ascend.
+// Source order is chronological (oldest first) for readability; displayed in reverse-chronological order.
 
-const roles = [
+const rolesChronological = [
   {
     id: "petrotrin",
     company: "Petrotrin",
@@ -238,6 +238,7 @@ const roles = [
   },
 ];
 
+const roles = rolesChronological.toReversed();
 const totalAchievements = roles.reduce((sum, r) => sum + r.achievements.length, 0);
 ---
 
